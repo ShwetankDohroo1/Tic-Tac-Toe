@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/index.css">
+  <link rel="stylesheet" href="src/components/loader.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+  <div class="mainloader">
+    <div class="loader">
+      
+    </div>
+
+  </div>
+  <header>
+    <img src="public/game-logo.png" alt="">
+    <h1>React Tic-Tac-Toe</h1>
+  </header>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    const cells = 4;
+    const mosaicLoader = document.querySelector('.loader');
+
+    for (let i = 0; i < cells; i++) {
+      for (let j = 0; j < cells; j++) {
+        const cell = document.createElement('div');
+        cell.className = `cell d-${i + j}`;
+        mosaicLoader.appendChild(cell);
+      }
+    }
+  </script>
+</body>
+
+</html>
